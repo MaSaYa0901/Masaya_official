@@ -10,6 +10,12 @@
 <style>
 *{margin:0;padding:0;box-sizing:border-box;font-family:'Noto Sans JP',sans-serif;scroll-behavior:smooth}
 body{background:#000;color:#fff;line-height:1.7}
+
+.hero{
+
+padding-top:90px;
+
+}
 .hero{
     min-height:100vh;
     background:#000;
@@ -130,6 +136,59 @@ section{
     font-size:1.8rem;
 }
 
+}
+
+.live-list{
+display:flex;
+flex-direction:column;
+gap:20px;
+}
+
+.live-item{
+background:#111;
+padding:25px;
+border-radius:15px;
+transition:.3s;
+}
+
+.live-item:hover{
+transform:translateY(-3px);
+box-shadow:0 0 15px rgba(255,255,255,.1);
+}
+
+.live-date{
+font-size:1.4rem;
+font-weight:bold;
+margin-bottom:12px;
+color:white;
+}
+
+.live-place{
+font-size:1.1rem;
+margin-bottom:8px;
+}
+
+.live-ticket{
+font-size:1rem;
+color:#ddd;
+}
+
+@media(max-width:768px){
+
+.live-item{
+padding:18px;
+}
+
+.live-date{
+font-size:1.2rem;
+}
+
+.live-place{
+font-size:1rem;
+}
+
+}
+
 .live-list{
 
 display:flex;
@@ -188,30 +247,170 @@ color:#ddd;
 
 @media(max-width:768px){
 
+.menu{
+gap:18px;
+}
+
+.menu a{
+font-size:12px;
+}
+
 .live-item{
-
 padding:18px;
-
 }
 
 .live-date{
-
 font-size:1.2rem;
-
 }
 
 .live-place{
-
 font-size:1rem;
-
 }
 
 }
 
 }
+
+nav{
+
+position:fixed;
+top:-80px;
+left:0;
+
+width:100%;
+
+background:rgba(0,0,0,.88);
+
+backdrop-filter:blur(10px);
+
+padding:18px 0;
+
+transition:0.4s;
+
+z-index:999;
+
+}
+
+nav.show{
+
+top:0;
+
+}
+
+.menu{
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+gap:50px;
+
+width:100%;
+
+}
+
+.menu a{
+
+color:#fff;
+
+text-decoration:none;
+
+font-size:15px;
+
+font-weight:500;
+
+transition:.3s;
+
+}
+
+.menu a:hover{
+
+color:#c00;
+
+}
+
+nav>a{
+
+color:white;
+
+text-decoration:none;
+
+font-size:24px;
+
+font-weight:bold;
+
+}
+
+.menu{
+
+display:flex;
+
+gap:30px;
+
+}
+
+.menu a{
+
+color:white;
+
+text-decoration:none;
+
+font-size:15px;
+
+transition:.3s;
+
+}
+
+.menu a:hover{
+
+color:#c00;
+
+}
+
+@media(max-width:768px){
+
+nav{
+
+padding:15px 5%;
+
+}
+
+.menu{
+
+gap:12px;
+
+}
+
+.menu a{
+
+font-size:11px;
+
+}
+
+nav>a{
+
+font-size:20px;
+
+}
+
+}
+
 </style>
 </head>
 <body>
+<nav>
+
+<div class="menu">
+<a href="#profile">PROFILE</a>
+<a href="#live">LIVE</a>
+<a href="#sns">SNS</a>
+<a href="#contact">CONTACT</a>
+
+</div>
+
+</nav>
 
 <header class="hero">
 
@@ -221,7 +420,7 @@ font-size:1rem;
 
 <h1>政弥</h1>
 
-<p>Singer Song Writer</p>
+<p>Singer-SongWriter</p>
 
 <a class="btn" href="#profile">
 Scroll
@@ -238,7 +437,7 @@ Scroll
 </p>
 <p>主に、SNSで弾き語りカバーやオリジナル曲を投稿している。
 </p>
-<p>現在は八王子を拠点に活動している。
+<p>現在は八王子を拠点に活動中。
 </p>
 </div>
 </section>
@@ -256,11 +455,11 @@ Scroll
 </div>
 
 <div class="live-place">
-📍 八王子 立ち呑み太郎
+📍八王子 立ち呑み太郎
 </div>
 
-<div class="live-event">
-🎸 弾き語りライブ
+<div class="live-ticket">
+🎫￥1,200-
 </div>
 
 </div>
@@ -272,11 +471,11 @@ Scroll
 </div>
 
 <div class="live-place">
-📍 八王子 ロックバー大吉
+📍八王子 ロックバー大吉
 </div>
 
-<div class="live-event">
-🎸 弾き語りライブ
+<div class="live-ticket">
+🎫￥0-
 </div>
 
 </div>
@@ -305,6 +504,26 @@ Scroll
 <footer>
 © Masaya Official Website
 </footer>
+
+<script>
+
+window.addEventListener("scroll",function(){
+
+const nav=document.querySelector("nav");
+
+if(window.scrollY>150){
+
+nav.classList.add("show");
+
+}else{
+
+nav.classList.remove("show");
+
+}
+
+});
+
+</script>
 
 </body>
 </html>
