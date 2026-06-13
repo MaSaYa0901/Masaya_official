@@ -130,6 +130,84 @@ section{
     font-size:1.8rem;
 }
 
+.live-list{
+
+display:flex;
+flex-direction:column;
+gap:20px;
+
+}
+
+.live-item{
+
+background:#111;
+
+padding:25px;
+
+border-radius:15px;
+
+transition:.3s;
+
+}
+
+.live-item:hover{
+
+transform:translateY(-3px);
+
+box-shadow:0 0 15px rgba(255,255,255,.1);
+
+}
+
+.live-date{
+
+font-size:1.4rem;
+
+font-weight:bold;
+
+margin-bottom:12px;
+
+color:white;
+
+}
+
+.live-place{
+
+font-size:1.1rem;
+
+margin-bottom:8px;
+
+}
+
+.live-event{
+
+font-size:1rem;
+
+color:#ddd;
+
+}
+
+@media(max-width:768px){
+
+.live-item{
+
+padding:18px;
+
+}
+
+.live-date{
+
+font-size:1.2rem;
+
+}
+
+.live-place{
+
+font-size:1rem;
+
+}
+
+}
+
 }
 </style>
 </head>
@@ -166,33 +244,45 @@ Scroll
 </section>
 
 <section id="live">
+
 <h2>LIVE Schedule</h2>
-<div class="card">
-<table>
-<tr><th>Date</th><th>Place</th><th>Event</th></tr>
 
-<tr>
-<td>2026/6/14(Sun.)</td>
-<td>八王子 立ち呑み太郎</td>
-<td>弾き語りライブ</td>
-</tr>
+<div class="live-list">
 
-<tr>
-<td>2026/6/19(Fri.)</td>
-<td>八王子 ロックバー大吉</td>
-<td>弾き語りライブ</td>
-</tr>
+<div class="live-item">
 
-<!-- ライブを追加するときは下をコピーして貼り付け
-<tr>
-<td>2026/07/15</td>
-<td>新宿○○</td>
-<td>弾き語りライブ</td>
-</tr>
--->
-
-</table>
+<div class="live-date">
+2026/6/14(Sun.)
 </div>
+
+<div class="live-place">
+📍 八王子 立ち呑み太郎
+</div>
+
+<div class="live-event">
+🎸 弾き語りライブ
+</div>
+
+</div>
+
+<div class="live-item">
+
+<div class="live-date">
+2026/6/19(Fri.)
+</div>
+
+<div class="live-place">
+📍 八王子 ロックバー大吉
+</div>
+
+<div class="live-event">
+🎸 弾き語りライブ
+</div>
+
+</div>
+
+</div>
+
 </section>
 
 <section id="sns">
