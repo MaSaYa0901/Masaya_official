@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>政弥 - Masaya Official</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Noto Sans JP',sans-serif;scroll-behavior:smooth}
+body{background:#000;color:#fff;line-height:1.7}
+
+.hero{
+
+padding-top:90px;
+
+}
+.hero{
+    min-height:100vh;
+    background:#000;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:50px 20px;
+}
+
+.hero-content{
+display:flex;
+flex-direction:column;
+align-items:center;
+}
+
+.artist-photo{
+
+width:80%;
+max-width:700px;
+
+border-radius:10px;
+
+box-shadow:0 0 20px rgba(255,255,255,.2);
+
+margin-bottom:25px;
+
+}
+
+
+.hero h1{font-size:4rem;letter-spacing:4px}
+.hero p{font-size:1.2rem;margin-top:10px}
+.btn{display:inline-block;margin-top:30px;padding:12px 30px;border:2px solid #fff;color:#fff;text-decoration:none}
+section{padding:70px 10%}
+h2{border-left:5px solid #c00;padding-left:12px;margin-bottom:25px}
+.card{background:#111;border-radius:12px;padding:25px}
+
+.card{
+background:#111;
+border-radius:12px;
+padding:25px;
+}
+
+.card p{
+margin-bottom:10px;
+line-height:1.9;
+}
+
+table{
+width:100%;
+border-collapse:collapse;
+}
+
+.card{
+
+width:100%;
+
+}
+
+table{
+
+width:100%;
+
+}
+
+th{
+
+width:33%;
+
+}
+
+td{
+
+width:33%;
+
+}
+
+th,td{border-bottom:1px solid #333;padding:14px;text-align:left}
+.icons{display:flex;gap:30px;justify-content:center;flex-wrap:wrap;font-size:2rem}
+.icons a{color:#fff;text-decoration:none;transition:.2s}
+.icons a:hover{transform:scale(1.15)}
+.contact{text-align:center;font-size:1.2rem}
+footer{padding:30px;text-align:center;background:#111}
+@media(max-width:768px){
+.hero h1{font-size:2.5rem}
+.icons{gap:20px;font-size:1.8rem}
+}
+
+@media screen and (max-width:768px){
+
+.hero{
+    padding:30px 15px;
+}
+
+.artist-photo{
+    width:95%;
+}
+
+.hero h1{
+    font-size:38px;
+    letter-spacing:1px;
+}
+
+.hero p{
+    font-size:18px;
+}
+
+section{
+    padding:50px 6%;
+}
+
+.card{
+    padding:18px;
+}
+
+.icons{
+    gap:20px;
+    font-size:1.8rem;
+}
+
+}
+
+.live-list{
+display:flex;
+flex-direction:column;
+gap:20px;
+}
+
+.live-item{
+background:#111;
+padding:25px;
+border-radius:15px;
+transition:.3s;
+}
+
+.live-item:hover{
+transform:translateY(-3px);
+box-shadow:0 0 15px rgba(255,255,255,.1);
+}
+
+.live-date{
+font-size:1.4rem;
+font-weight:bold;
+margin-bottom:12px;
+color:white;
+}
+
+.live-place{
+font-size:1.1rem;
+margin-bottom:8px;
+}
+
+.live-ticket{
+font-size:1rem;
+color:#ddd;
+}
+
+@media(max-width:768px){
+
+.live-item{
+padding:18px;
+}
+
+.live-date{
+font-size:1.2rem;
+}
+
+.live-place{
+font-size:1rem;
+}
+
+}
+
+.live-list{
+
+display:flex;
+flex-direction:column;
+gap:20px;
+
+}
+
+.live-item{
+
+background:#111;
+
+padding:25px;
+
+border-radius:15px;
+
+transition:.3s;
+
+}
+
+.live-item:hover{
+
+transform:translateY(-3px);
+
+box-shadow:0 0 15px rgba(255,255,255,.1);
+
+}
+
+.live-date{
+
+font-size:1.4rem;
+
+font-weight:bold;
+
+margin-bottom:12px;
+
+color:white;
+
+}
+
+.live-place{
+
+font-size:1.1rem;
+
+margin-bottom:8px;
+
+}
+
+.live-event{
+
+font-size:1rem;
+
+color:#ddd;
+
+}
+
+@media(max-width:768px){
+
+.menu{
+gap:18px;
+}
+
+.menu a{
+font-size:12px;
+}
+
+.live-item{
+padding:18px;
+}
+
+.live-date{
+font-size:1.2rem;
+}
+
+.live-place{
+font-size:1rem;
+}
+
+}
+
+nav{
+
+position:fixed;
+top:-120px;
+left:0;
+width:100%;
+
+background:rgba(0,0,0,.88);
+backdrop-filter:blur(10px);
+
+padding:18px 0;
+
+transition:all .4s ease;
+
+z-index:999;
+
+}
+
+nav.show{
+
+top:0;
+
+}
+
+.menu{
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+gap:50px;
+
+width:100%;
+
+}
+
+.menu a{
+
+color:#fff;
+
+text-decoration:none;
+
+font-size:15px;
+
+font-weight:500;
+
+transition:.3s;
+
+}
+
+.menu a:hover{
+
+color:#c00;
+
+}
+
+nav>a{
+
+color:white;
+
+text-decoration:none;
+
+font-size:24px;
+
+font-weight:bold;
+
+}
+
+.menu{
+
+display:flex;
+
+gap:30px;
+
+}
+
+.menu a{
+
+color:white;
+
+text-decoration:none;
+
+font-size:15px;
+
+transition:.3s;
+
+}
+
+.menu a:hover{
+
+color:#c00;
+
+}
+
+@media(max-width:768px){
+
+nav{
+
+padding:15px 5%;
+
+}
+
+.menu{
+
+gap:12px;
+
+}
+
+.menu a{
+
+font-size:11px;
+
+}
+
+nav>a{
+
+font-size:20px;
+
+}
+
+}
+
+</style>
+</head>
+<body>
+<nav>
+
+<div class="menu">
+<a href="#profile">PROFILE</a>
+<a href="#live">LIVE</a>
+<a href="#sns">SNS</a>
+<a href="#contact">CONTACT</a>
+
+</div>
+
+</nav>
+
+<header class="hero">
+
+<div class="hero-content">
+
+<img src="images/top.jpg" class="artist-photo">
+
+<h1>政弥</h1>
+
+<p>Singer-SongWriter</p>
+
+<a class="btn" href="#profile">
+Scroll
+</a>
+
+</div>
+
+</header>
+
+<section id="profile">
+<h2>PROFILE</h2>
+<div class="card">
+<p>2003年生まれ。埼玉県出身のシンガーソングライター。
+</p>
+<p>主に、SNSで弾き語りカバーやオリジナル曲を投稿している。
+</p>
+<p>現在は八王子を拠点に活動中。
+</p>
+</div>
+</section>
+
+<section id="live">
+
+<h2>LIVE Schedule</h2>
+
+<div class="live-list">
+
+<div class="live-item">
+
+<div class="live-date">
+2026/7/18(Sat.)
+</div>
+
+<div class="live-place">
+📍八王子 ロックバー大吉
+</div>
+
+<div class="live-ticket">
+🎫(未定)
+</div>
+
+</div>
+
+<div class="live-item">
+
+<div class="live-date">
+2026/9/27(Sun.)
+</div>
+
+<div class="live-place">
+📍Coming soon...
+</div>
+
+<div class="live-ticket">
+🎫(未定)
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="sns">
+<h2>SNS</h2>
+<div class="icons">
+<a href="https://www.youtube.com/@政弥_Masaya" target="_blank" title="YouTube"><i class="fab fa-youtube"></i></a>
+<a href="https://x.com/MaSaYa_0901" target="_blank" title="X"><i class="fa-brands fa-x-twitter"></i></a>
+<a href="https://www.instagram.com/music_msy0901/" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+<a href="https://www.tiktok.com/@music_msy2?is_from_webapp=1&sender_device=pc" target="_blank" title="TikTok"><i class="fab fa-tiktok"></i></a>
+</div>
+</section>
+
+<section id="contact">
+<h2>CONTACT</h2>
+<div class="card contact">
+<a style="color:white" href="mailto:music09msy@gmail.com">music09msy@gmail.com</a>
+</div>
+</section>
+
+<footer>
+© Masaya Official Website
+</footer>
+
+<script>
+
+window.addEventListener("scroll",function(){
+
+const nav=document.querySelector("nav");
+
+if(window.scrollY>150){
+
+nav.classList.add("show");
+
+}else{
+
+nav.classList.remove("show");
+
+}
+
+});
+
+</script>
+
+</body>
+</html>
